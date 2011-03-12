@@ -1,0 +1,89 @@
+body {
+	font-size:16px;
+	font-family: "palatino linotype",palatino,serif;
+	letter-spacing: 3pt;
+	color: #939393;
+}
+
+#content {
+	margin-top: 50px;
+}
+
+.page-box {
+	-moz-box-shadow: 5px 5px 10px #DFDEE7;
+	background-color: #F9F9F9;
+}
+.img {
+	margin: 20px 0;
+}
+
+#header {
+	text-align:center;
+}
+
+h1 {
+	font-size: 1.5em;
+	font-variant: small-caps;
+	font-weight: normal;
+	letter-spacing: 21pt;
+	margin-bottom: 10px;
+	color:#707070;
+	padding-left: 15pt;
+	border-bottom:solid #efefef 5px;
+}
+
+ul {
+	list-style:none;
+	padding-left:0px;
+}
+
+#skills li {
+	margin-bottom: 10px;
+	border-bottom: solid #efefef 3px;
+}
+
+.left {text-align:left}
+.right{text-align:right}
+
+a {
+	text-decoration:none;
+	color:#09F;
+}
+a:hover {
+	text-decoration:underline;
+}
+
+.boxgrid{
+	width: 470px;
+	height: 200px;
+	float:left;
+	background:#161613;
+	border: solid 2px #8399AF;
+	overflow: hidden;
+	position: relative;
+}
+.boxgrid img{
+	position: absolute;
+	top: 0;
+	left: 0;
+	border: 0;
+}
+
+.boxcaption{
+	float: left;
+	position: absolute;
+	background: rgb(0,0,0);
+	background: rgba(0,0,0,0.7);
+	height: 100px;
+	width: 100%;
+	padding:3px 10px;
+	color: #fff;
+	font-family:Verdana, Geneva, sans-serif;
+	font-size: .6em;
+	letter-spacing:normal;
+}
+
+.caption .boxcaption {  
+    top: 200px;
+    left: 0;  
+}  

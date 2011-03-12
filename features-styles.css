@@ -1,0 +1,35 @@
+body {
+    background: url("img/graphy-site-inner-bg.jpg") center 65px no-repeat;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+#features h1 {
+    text-decoration: underline;
+    margin-bottom: 0.8em;
+}
+
+#features ul {
+    list-style-type: square;
+    font-size: 22px;
+}
+
+#features li {
+    margin-bottom: 1em;
+}
+
+#features a {
+    text-decoration: underline;
+    color: #000000;
+}
+
+#features a:hover {
+    color: #0099FF;
+}
+
+#download {
+    margin-top: 360px;
+    padding-left: 0;
+}

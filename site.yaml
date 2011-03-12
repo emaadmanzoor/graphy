@@ -1,0 +1,12 @@
+handlers:
+- url: '/'
+  static_files: 'index.html'
+  upload: '.*'
+- url: '/'
+  static_dir: '/'
+- url: '/blueprint'
+  static_dir: 'blueprint'
+- url: '/blueprint/plugins'
+  static_dir: 'blueprint/plugins'
+- url: '/img'
+  static_dir: 'img'

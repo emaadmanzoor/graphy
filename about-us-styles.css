@@ -1,0 +1,20 @@
+body {
+    background: #FFFFFF;
+}
+
+.about-us-text a, .about-name a {
+    text-decoration: underline;
+    color: #000000;
+}
+
+.about-us-text a:hover, .about-name a:hover {
+    color: #0099FF;
+}
+
+.right-aligned {
+    text-align: right;
+}
+
+p {
+    font-size: 22px;
+}

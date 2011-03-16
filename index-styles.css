@@ -14,6 +14,10 @@ h1 {
     margin-bottom: 0.4em;
 }
 
+.container {
+    margin-bottom: 50px;
+}
+
 #header-background {
     background-color: #000000;
     min-height: 66px;
@@ -21,9 +25,6 @@ h1 {
     top: 0;
     z-index: -100;
     width: 100%;
-}
-
-#header-logo {
 }
 
 #header-nav {
@@ -103,17 +104,20 @@ h1 {
 #footer {
     color: #FFFFFF;
     background-color: #000000;
-    font-family:  Arial, Verdana, sans-serif;
-    height: 60px;
-    margin-top: 50px;
+    height: 40px;
     text-transform: uppercase;
     font-size: 12px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    margin-top: 50px;
+    width: 100%;
 }
 
 #footer-links {
     float: right;
     width: 450px;
-    margin-top: 23px
+    margin-top: 12px
 }
 
 #footer-links ul {
@@ -136,7 +140,7 @@ h1 {
 
 #copyright {
     float: left;
-    margin-top: 23px;
+    margin-top: 12px;
     margin-left: 20px;
     width: 225px;
 }

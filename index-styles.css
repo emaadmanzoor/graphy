@@ -11,7 +11,7 @@ a {
 
 h1 {
     font-size: 5em;
-    margin-bottom: 0.4em;
+    margin-bottom: 0.3em;
 }
 
 .container {
@@ -29,6 +29,7 @@ h1 {
 
 #header-nav {
     margin-top: 2.5em;
+    padding-left: 25px;
 }
 
 #header-nav ul {
@@ -87,7 +88,7 @@ h1 {
 
 #download {
     padding-top: 100px;
-    padding-left: 30px;
+    padding-left: 25px;
     text-align: center
 }
 
@@ -128,7 +129,7 @@ h1 {
     float: left;
     margin: 0;
     padding: 0;
-    text-align: center;
+    text-align: right;
     width: 33%; 
 }
 

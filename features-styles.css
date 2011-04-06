@@ -1,34 +1,21 @@
 body {
-    background: url("img/graphy-site-inner-bg.jpg") center 65px no-repeat;
+    background: #FFFFFF;
 }
 
 .bold {
     font-weight: bold;
 }
 
-#features h1 {
-    margin-bottom: 0.8em;
+p {
+    font-size: 1.8em;
 }
 
-#features ul {
-    list-style-type: square;
-    font-size: 22px;
-}
 
-#features li {
-    margin-bottom: 1em;
-}
-
-#features a {
+.features a {
     text-decoration: underline;
     color: #000000;
 }
 
-#features a:hover {
+.features a:hover {
     color: #0099FF;
-}
-
-#download {
-    margin-top: 360px;
-    padding-left: 35px;
 }

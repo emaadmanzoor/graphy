@@ -1,0 +1,13 @@
+-----------
+Graphy v1.0
+-----------
+
+INSTALLATION:
+
+1. Go to the /jre folder and install the JRE from there.
+
+2. After the JRE has been installed, double-click on graphy.jar in /bin to run it.
+
+EXAMPLES:
+
+A number of example graphs have been provided to test algorithms in the /examples folder.

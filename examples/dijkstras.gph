@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns/graphml"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
+xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns/graphml">
+<key id="y" for="node">
+<default>0</default>
+</key>
+<key id="x" for="node">
+<default>0</default>
+</key>
+<key id="weight" for="edge">
+<default>0</default>
+</key>
+<key id="capacity" for="edge">
+<default>0</default>
+</key>
+<graph edgedefault="undirected">
+<node id="v1">
+<data key="y">95.0</data>
+<data key="x">446.0</data>
+</node>
+<node id="v2">
+<data key="y">231.0</data>
+<data key="x">433.0</data>
+</node>
+<node id="v3">
+<data key="y">173.0</data>
+<data key="x">569.0</data>
+</node>
+<node id="v0">
+<data key="y">166.0</data>
+<data key="x">294.0</data>
+</node>
+<edge source="v1" target="v3">
+<data key="weight">10</data>
+<data key="capacity">0</data>
+</edge>
+<edge source="v2" target="v3">
+<data key="weight">0</data>
+<data key="capacity">0</data>
+</edge>
+<edge source="v0" target="v1">
+<data key="weight">10</data>
+<data key="capacity">0</data>
+</edge>
+<edge source="v0" target="v2">
+<data key="weight">0</data>
+<data key="capacity">0</data>
+</edge>
+</graph>
+</graphml>

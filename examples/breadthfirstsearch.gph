@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns/graphml"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
+xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns/graphml">
+<key id="y" for="node">
+<default>0</default>
+</key>
+<key id="x" for="node">
+<default>0</default>
+</key>
+<key id="weight" for="edge">
+<default>0</default>
+</key>
+<key id="capacity" for="edge">
+<default>0</default>
+</key>
+<graph edgedefault="undirected">
+<node id="v23">
+<data key="y">266.936279296875</data>
+<data key="x">371.56378173828125</data>
+</node>
+<node id="v20">
+<data key="y">228.0045166015625</data>
+<data key="x">716.4854736328125</data>
+</node>
+<node id="v1">
+<data key="y">171.3144073486328</data>
+<data key="x">339.462158203125</data>
+</node>
+<node id="v22">
+<data key="y">258.7401123046875</data>
+<data key="x">485.62701416015625</data>
+</node>
+<node id="v5">
+<data key="y">273.76641845703125</data>
+<data key="x">331.9490051269531</data>
+</node>
+<node id="v8">
+<data key="y">269.6683349609375</data>
+<data key="x">641.3540649414062</data>
+</node>
+<node id="v18">
+<data key="y">337.2866516113281</data>
+<data key="x">415.27667236328125</data>
+</node>
+<node id="v12">
+<data key="y">335.920654296875</data>
+<data key="x">472.6497497558594</data>
+</node>
+<node id="v0">
+<data key="y">85.93773651123047</data>
+<data key="x">404.3484191894531</data>
+</node>
+<node id="v11">
+<data key="y">335.920654296875</data>
+<data key="x">370.8807678222656</data>
+</node>
+<node id="v6">
+<data key="y">278.5475158691406</data>
+<data key="x">426.8878479003906</data>
+</node>
+<node id="v19">
+<data key="y">196.58590698242188</data>
+<data key="x">672.772705078125</data>
+</node>
+<node id="v15">
+<data key="y">223.22344207763672</data>
+<data key="x">397.5182800292969</data>
+</node>
+<node id="v21">
+<data key="y">273.0834045410156</data>
+<data key="x">747.9041137695312</data>
+</node>
+<node id="v13">
+<data key="y">329.09051513671875</data>
+<data key="x">581.2489013671875</data>
+</node>
+<node id="v14">
+<data key="y">319.5283203125</data>
+<data key="x">694.6290893554688</data>
+</node>
+<node id="v17">
+<data key="y">338.6526794433594</data>
+<data key="x">313.50762939453125</data>
+</node>
+<node id="v4">
+<data key="y">260.7891540527344</data>
+<data key="x">254.76849365234375</data>
+</node>
+<node id="v3">
+<data key="y">187.0237274169922</data>
+<data key="x">536.1699829101562</data>
+</node>
+<node id="v10">
+<data key="y">332.5055847167969</data>
+<data key="x">268.4287414550781</data>
+</node>
+<node id="v9">
+<data key="y">323.62640380859375</data>
+<data key="x">182.3690643310547</data>
+</node>
+<node id="v7">
+<data key="y">271.7173767089844</data>
+<data key="x">534.1209716796875</data>
+</node>
+<node id="v16">
+<data key="y">211.61219787597656</data>
+<data key="x">471.2837219238281</data>
+</node>
+<node id="v2">
+<data key="y">174.72947692871094</data>
+<data key="x">421.42376708984375</data>
+</node>
+<edge source="v8" target="v19">
+<data key="weight">0</data>
+<data key="capacity">0</data>
+</edge>
+<edge source="v16" target="v3">
+<data key="weight">0</data>
+<data key="capacity">0</data>
+</edge>
+<edge source="v2" target="v6">
+<data key="weight">0</data>
+<data key="capacity">0</data>
+</edge>
+<edge source="v1" target="v15">
+<data key="weight">0</data>
+<data key="capacity">0</data>
+</edge>
+<edge source="v0" target="v1">
+<data key="weight">0</data>
+<data key="capacity">0</data>
+</edge>
+<edge source="v4" target="v9">
+<data key="weight">0</data>
+<data key="capacity">0</data>
+</edge>
+<edge source="v8" target="v21">
+<data key="weight">0</data>
+<data key="capacity">0</data>
+</edge>
+<edge source="v4" target="v17">
+<data key="weight">0</data>
+<data key="capacity">0</data>
+</edge>
+<edge source="v5" target="v18">
+<data key="weight">0</data>
+<data key="capacity">0</data>
+</edge>
+<edge source="v2" target="v16">
+<data key="weight">0</data>
+<data key="capacity">0</data>
+</edge>
+<edge source="v7" target="v14">
+<data key="weight">0</data>
+<data key="capacity">0</data>
+</edge>
+<edge source="v5" target="v11">
+<data key="weight">0</data>
+<data key="capacity">0</data>
+</edge>
+<edge source="v6" target="v22">
+<data key="weight">0</data>
+<data key="capacity">0</data>
+</edge>
+<edge source="v0" target="v2">
+<data key="weight">0</data>
+<data key="capacity">0</data>
+</edge>
+<edge source="v0" target="v3">
+<data key="weight">0</data>
+<data key="capacity">0</data>
+</edge>
+<edge source="v4" target="v10">
+<data key="weight">0</data>
+<data key="capacity">0</data>
+</edge>
+<edge source="v1" target="v5">
+<data key="weight">0</data>
+<data key="capacity">0</data>
+</edge>
+<edge source="v15" target="v23">
+<data key="weight">0</data>
+<data key="capacity">0</data>
+</edge>
+<edge source="v3" target="v7">
+<data key="weight">0</data>
+<data key="capacity">0</data>
+</edge>
+<edge source="v3" target="v8">
+<data key="weight">0</data>
+<data key="capacity">0</data>
+</edge>
+<edge source="v15" target="v2">
+<data key="weight">0</data>
+<data key="capacity">0</data>
+</edge>
+<edge source="v8" target="v20">
+<data key="weight">0</data>
+<data key="capacity">0</data>
+</edge>
+<edge source="v6" target="v12">
+<data key="weight">0</data>
+<data key="capacity">0</data>
+</edge>
+<edge source="v6" target="v13">
+<data key="weight">0</data>
+<data key="capacity">0</data>
+</edge>
+<edge source="v1" target="v4">
+<data key="weight">0</data>
+<data key="capacity">0</data>
+</edge>
+</graph>
+</graphml>

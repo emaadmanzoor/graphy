@@ -1,0 +1,9 @@
+* Aug 20, 2011; Graphy Alpha 0.5
+	
+	Changes:
+	- Created changelog
+	- Show/hide vertex/edge labels
+	- Custom vertex/edge labels
+	
+	Issues:
+	- Custom labels are not retained on saving/loading

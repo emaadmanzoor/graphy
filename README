@@ -4,9 +4,9 @@ Graphy v1.0
 
 INSTALLATION:
 
-1. Go to the /jre folder and install the JRE from there.
+1. Make sure you have the JRE installed.
 
-2. After the JRE has been installed, double-click on graphy.jar in /bin to run it.
+2. After the JRE has been installed, double-click on graphy.jar in /dist to run it.
 
 EXAMPLES:
 

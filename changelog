@@ -1,3 +1,11 @@
+* Feb 14, 2011; Graphy Alpha 0.6
+
+	Changes:
+	- Show/hide edge capacities
+
+	Issues:
+	- Badly written code, uses global vars
+
 * Aug 20, 2011; Graphy Alpha 0.5
 	
 	Changes:

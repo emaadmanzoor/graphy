@@ -62,6 +62,7 @@ public class MyGraphVisualizer {
     public JFrame mainWindow;
     public static infoPanel informationPanel;
     public JPanel graphPanel;
+    public boolean capacitiesVisible = true;
     
     /* Algorithm Runners */
     public static AlgorithmVisualizer currentAlgorithmVisualizer ;
@@ -289,17 +290,23 @@ public class MyGraphVisualizer {
 
         JCheckBoxMenuItem vertexLabelsItem = new JCheckBoxMenuItem("Vertex Labels");
         JCheckBoxMenuItem edgeLabelsItem = new JCheckBoxMenuItem("Edge Labels");
+        JCheckBoxMenuItem edgeCapacitiesItem = new JCheckBoxMenuItem("Edge Capacities");
+        
         vertexLabelsItem.setSelected(true);
         edgeLabelsItem.setSelected(true);
+        edgeCapacitiesItem.setSelected(true);
         
         vertexLabelsItem.addActionListener(fileEventListener);
         edgeLabelsItem.addActionListener(fileEventListener);
-
+        edgeCapacitiesItem.addActionListener(fileEventListener);
+        
         vertexLabelsItem.setEnabled(false);
         edgeLabelsItem.setEnabled(false);
+        edgeCapacitiesItem.setEnabled(false);
 
         viewMenu.add(vertexLabelsItem);
         viewMenu.add(edgeLabelsItem);
+        viewMenu.add(edgeCapacitiesItem);
 
         // Adding Individual Menus to MenuBar
         menuBar.add(fileMenu);

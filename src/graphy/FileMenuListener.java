@@ -147,6 +147,8 @@ public class FileMenuListener implements ActionListener {
         }
         else if(text.contains("Edge Labels")) {
             toggleEdgeLabels();
+        } else if(text.contains("Edge Capacities")) {
+            toggleEdgeCapacities();
         }
         else if(text.contains("Open Graph")) {
           try {
@@ -451,11 +453,34 @@ public class FileMenuListener implements ActionListener {
     private void toggleEdgeLabels() {
         if(vv.getRenderer().getEdgeLabelRenderer().getClass().toString().contains("NOOP")) {
             graphy.vv.getRenderer().setEdgeLabelRenderer(new BasicEdgeLabelRenderer());
+            graphy.mainWindow.getJMenuBar().getMenu(1).getItem(2).setEnabled(true);    /* View Edge Capacities */
         } else {
             graphy.vv.getRenderer().setEdgeLabelRenderer(new Renderer.EdgeLabel.NOOP());
+            graphy.mainWindow.getJMenuBar().getMenu(1).getItem(2).setEnabled(false);    /* View Edge Capacities */
         }
-        graphy.vv.repaint();    }
+        graphy.vv.repaint();    
+    }
 
+    private void toggleEdgeCapacities() {
+        System.out.println(graphy.capacitiesVisible);
+        if(graphy.capacitiesVisible) {
+            vv.getRenderContext().setEdgeLabelTransformer(new Transformer<MyEdge, String>() {
+                public String transform(MyEdge e) {
+                    return (e.toString() + " w=" + e.getWeight());
+                }
+            });
+            graphy.capacitiesVisible = false;
+        } else {
+            vv.getRenderContext().setEdgeLabelTransformer(new Transformer<MyEdge, String>() {
+                public String transform(MyEdge e) {
+                    return (e.toString() + " " + e.getWeight() + "/" + e.getCapacity());
+                }
+            });
+            graphy.capacitiesVisible = true;
+        }
+        graphy.vv.repaint();    
+    }
+        
     public void fileOptionsAccess(boolean newG, boolean openG, boolean exportG, boolean saveG) {
 
             Component fileComponents[] = mainFrame.getJMenuBar().getMenu(0).getMenuComponents();
@@ -467,6 +492,7 @@ public class FileMenuListener implements ActionListener {
             
             graphy.mainWindow.getJMenuBar().getMenu(1).getItem(0).setEnabled(exportG);    /* View Vertex Labels */
             graphy.mainWindow.getJMenuBar().getMenu(1).getItem(1).setEnabled(exportG);    /* View Edge Labels */
+            graphy.mainWindow.getJMenuBar().getMenu(1).getItem(2).setEnabled(exportG);    /* View Edge Capacities */
 
             mainFrame.invalidate();
             mainFrame.validate();

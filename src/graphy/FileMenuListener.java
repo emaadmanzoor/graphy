@@ -260,8 +260,7 @@ public class FileMenuListener implements ActionListener {
             // Adding the visualization viewer to the graph panel of the main frame
             final GraphZoomScrollPane panel = new GraphZoomScrollPane(vv);
 
-            graphy.graphPanel.add("Center", panel);
-            graphy.graphPanel.add("South", new JLabel(" "));
+            graphy.graphPanel.add(panel);
 
             MyGraphVisualizer.informationPanel.graphButtons.graphAlgoButtons.enableButtonPanel();
             MyGraphVisualizer.informationPanel.graphButtons.graphFileButtons.enableButtonPanel();

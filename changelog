@@ -1,3 +1,11 @@
+* Feb 26, 2011; Graphy Alpha 0.7
+    Changes:
+	- Font-size spinners for the information panel
+	- Foreground/background color inverter button
+	for the information panel
+	- Resizable split-panel separating the graph
+	panel from the information panel
+
 * Feb 14, 2011; Graphy Alpha 0.6
 
 	Changes:

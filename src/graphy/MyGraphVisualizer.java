@@ -17,6 +17,7 @@ import java.awt.Color;
 import java.awt.Component;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
+import java.awt.Font;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.Rectangle;
@@ -24,6 +25,8 @@ import java.awt.SplashScreen;
 import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.ItemEvent;
+import java.awt.event.ItemListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.image.BufferedImage;
@@ -45,6 +48,7 @@ import javax.swing.filechooser.FileFilter;
 import javax.swing.UIManager.LookAndFeelInfo;
 import javax.swing.Timer;
 
+import javax.swing.border.EmptyBorder;
 import org.apache.commons.collections15.Transformer;
 
 /**
@@ -333,7 +337,7 @@ public class MyGraphVisualizer {
         /* Show the splash screen */
         final SplashScreen splash = SplashScreen.getSplashScreen();
         Graphics2D g = splash.createGraphics();
-        for(int i=0; i<100; i++) {
+        for(int i=0; i<10; i++) {
             graphy.renderSplashFrame(g, i);
             splash.update();
             Thread.sleep(10);
@@ -345,12 +349,18 @@ public class MyGraphVisualizer {
         graphy.mainWindow = new JFrame("Graphy");
 
         MyGraphVisualizer.informationPanel = new infoPanel(graphy);
-        graphy.mainWindow.getContentPane().add("South", MyGraphVisualizer.informationPanel);
+        //graphy.mainWindow.getContentPane().add("South", MyGraphVisualizer.informationPanel);
 
         graphy.graphPanel = new JPanel();
         graphy.graphPanel.setLayout(new BorderLayout());
-        graphy.mainWindow.getContentPane().add("Center", graphy.graphPanel);
-
+        
+        JSplitPane splitPane = new JSplitPane(JSplitPane.VERTICAL_SPLIT, true, graphy.graphPanel, MyGraphVisualizer.informationPanel);
+        splitPane.setOneTouchExpandable(true);
+        splitPane.setResizeWeight(1.0);
+        splitPane.setDividerLocation((double)0.70);
+        
+        //graphy.mainWindow.getContentPane().add("Center", graphy.graphPanel);
+        graphy.mainWindow.getContentPane().add("Center", splitPane);
         graphy.createMenus(graphy.mainWindow, graphy);
         
         graphy.mainWindow.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -369,6 +379,7 @@ class infoPanel extends JPanel {
 
     public infoTextArea info;
     public graphButtonPanel graphButtons;
+    public fontPanel fontButtons;
     
     public infoPanel(MyGraphVisualizer graphy) {
 
@@ -376,11 +387,12 @@ class infoPanel extends JPanel {
         graphButtons = new graphButtonPanel(graphy);
         JScrollPane scrollpane = new JScrollPane(info,
             ScrollPaneConstants.VERTICAL_SCROLLBAR_AS_NEEDED, ScrollPaneConstants.HORIZONTAL_SCROLLBAR_AS_NEEDED);
-
+        fontButtons = new fontPanel(graphy);
+        
         this.setLayout(new BorderLayout(10, 10));
         this.add("North", graphButtons);
         this.add("Center", scrollpane);
-
+        this.add("East", fontButtons);
     }
 
 }
@@ -425,6 +437,57 @@ class graphButtonPanel extends JPanel {
         this.add("West", graphFileButtons);
         this.add("East", graphAlgoButtons);
         
+    }
+
+}
+
+class fontPanel extends JPanel {
+    
+    public fontPanel(MyGraphVisualizer graphy) {
+
+        JButton incFontSizeBtn = new JButton("+");
+        JButton decFontSizeBtn = new JButton("-");
+        JToggleButton blackWhiteBtn = new JToggleButton("B", true);
+        
+        this.setLayout(new BorderLayout(0,5));
+        this.setPreferredSize(new Dimension(45,10));
+        this.setBorder(new EmptyBorder(5, 0, 5, 10));
+        
+        this.add("North", incFontSizeBtn);
+        this.add("Center", blackWhiteBtn);
+        this.add("South", decFontSizeBtn);
+        
+        incFontSizeBtn.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Font font = MyGraphVisualizer.informationPanel.info.getFont();
+                float size = (float) (font.getSize() + 1.0);
+                MyGraphVisualizer.informationPanel.info.setFont(font.deriveFont(size));
+            }
+        });
+        
+        decFontSizeBtn.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Font font = MyGraphVisualizer.informationPanel.info.getFont();
+                float size = (float) (font.getSize() - 1.0);
+                MyGraphVisualizer.informationPanel.info.setFont(font.deriveFont(size));
+            }
+        });
+        
+        blackWhiteBtn.addItemListener( new ItemListener() {
+          public void itemStateChanged(ItemEvent itemEvent) {
+            int state = itemEvent.getStateChange();
+            if (state == ItemEvent.SELECTED) {
+              MyGraphVisualizer.informationPanel.info.setForeground(Color.gray);
+              MyGraphVisualizer.informationPanel.info.setBackground(Color.black);
+
+            } else {
+              MyGraphVisualizer.informationPanel.info.setForeground(Color.black);
+              MyGraphVisualizer.informationPanel.info.setBackground(Color.white);
+            }
+          }
+        });
     }
 
 }
